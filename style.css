@@ -1,0 +1,134 @@
+body {
+  margin: 20;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  scroll-behavior: smooth;
+}
+
+/* Classes */
+.emoji{
+  display: flex;
+  
+}
+/* Header Text */
+
+
+#Mi, #Le, #Swk{
+  font-size: 30px;
+  font-family: Tahoma, sans-serif;
+}
+
+
+#header span{
+  transform: translateY(-100px);
+  animation: comeDown 2s ease-in-out forwards;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* sub-text */
+
+#subtitle{
+  font-family: Tahoma, sans-serif;
+  justify-content: center;
+  display: flex;
+  float: center;
+  border: black solid 3px
+}
+
+#subtitle span{
+  padding: 4px;
+  transform: translateY(-100px);
+  animation: comeDown 2s ease-in-out forwards;
+}
+
+/* Sections */
+.section{
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  animation: fadein 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 4.5s;
+  margin: 0;
+  padding-right: 3px; /* The reason why this is just right is because we do not want any space top or bottom */
+  padding-left: 3px; /* The reason why this is just left is because we do not want any space top or bottom */
+}
+.section-divider{
+  height: 1px;
+  background-color: black;
+  animation: section-divider-animation 4s forwards ease-in-out;
+  width: 0%;
+  margin: 10px;
+}
+
+@keyframes comeDown {
+  0% {opacity: 0;transform: translateY(-100px);}
+  50% {opacity: 1;transform: translateY(60px);}
+  100% {transform: translateY(0px); } /* NOTE: this is for speed purposes. Originally the animation was differant */
+}
+
+/* Fade text in. Used for lines of "about" sections*/
+@keyframes fadein{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+/*Makes that small line draw across the screen */
+@keyframes section-divider-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/*Have diferant delays for more of a "wave" animation rather than everything be one big block. Makes the website feel more "loose."
+/* gets the first, second, and third span elements in the subtitle */
+#subtitle span:nth-child(1) {animation-delay: 2.1s;}
+#subtitle span:nth-child(2) {animation-delay: 2.2s;}
+#subtitle span:nth-child(3) {animation-delay: 2.4s;}
+/* gets the first, second, and third span elements in the header */
+#header span:nth-child(1) {animation-delay: 0.2s;}
+#header span:nth-child(2) {animation-delay: 0.3s;}
+#header span:nth-child(3) {animation-delay: 0.4s;}
+/*Gets the second and third p elements in the about section */
+#about p:nth-child(2) {animation-delay: 5s;}
+#about p:nth-child(3) {animation-delay: 5.5s;}
+
+#journey p:nth-child(1) {animation-delay: 7s;}
+#journey p:nth-child(2) {animation-delay: 7.5s;}
+#journey p:nth-child(3) {animation-delay: 8s;}
+#journey p:nth-child(4) {animation-delay: 8.5s;}
+/* Gets first, second, and third p elements of the programming section */
+
+#programming p:nth-child(1) {animation-delay: 9s;}
+#programming p:nth-child(2) {animation-delay: 9.5s;}
+#programming p:nth-child(3) {animation-delay: 10s;}
+#programming p:nth-child(4) {animation-delay: 10.5s;}
+/* Gets first, second, and third p elements of the music section */
+#music p:nth-child(1) {animation-delay: 11s;}
+#music p:nth-child(2) {animation-delay: 11.5s;}
+#music p:nth-child(3) {animation-delay: 12s;}
+
+#showcase p:nth-child(1) {animation-delay: 12s;}
+#showcase p:nth-child(2) {animation-delay: 12.5s;}
+#showcase p:nth-child(3) {animation-delay: 13s;}
+
+#final p:nth-child(1) {animation-delay: 13.5s;}
+#final p:nth-child(2) {animation-delay: 14s;}
+#final p:nth-child(3) {animation-delay: 14.5s;}
+
+#section-divider-number-1{animation-delay: 6s}
+#section-divider-number-2{animation-delay: 7s}
+#section-divider-number-3{animation-delay: 8s}
+#section-divider-number-4{animation-delay: 9s}
+#section-divider-number-5{animation-delay: 10s}
